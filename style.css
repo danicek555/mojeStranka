@@ -1,0 +1,52 @@
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 200ms;
+  }
+
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+h1 { /*Tato CSS uprava upravy vsechny H1 na html strance*/ 
+  color:red;
+}
+
+.prvniclass { /* . se znaci CLASS pak jmeno, Je jich z pravidla vice v html ale nejsou vsechny (kdybychom dali p{} oznacili by se vsechny paragrafy ale to my uplne nechceme) */ 
+  color:blue;
+} 
+
+#prvniid{ /* # znaci ID pak jmeno, ID je vzdy y pravidla jedno v html a nedavame vic veci do jednoho ID (na to je class)*/
+  color: aquamarine;
+}
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!--Připojení CSS k html-->
+    <Style>   
+        h3{
+            font-family: papyrus;
+        }
+    </Style> <!-- Tady se občas stylují různé věci něco jako CSS v html-->
+    <title>JavaScript</title> <!-- Název stránky v liště nad url adresou -->
+</head>
+<body>
+    
+    <div class="flex"> <!-- Div je velmi zakladni znacka na udavani co v tom je. Vzdycky se musi zacit nebo ukoncit div kdyz se zacina nova vec.-->
+        <h1>Jak se máš?</h1> <!-- Zakladni nadpis v HTML, cim vetsi H1,H2,H3,H4...H6 tim mensi text-->
+    </div>
+
+    <p class="prvniclass">Muj prvni class</p> <!-- p - znacka pro paragraf pisou se tim texty, Atribut Class se dava kdyz ho chceme v CSS upravit a je jich VICE-->
+    <p id="prvniid">Moje prvni ID</p> <!-- Atribut ID je vzdy pro jednu vec a nikdy jich neni vice v html-->
+    <em>Duraz</em> <!-- Em - emphasis je duraz na dane slovo -->
+    <strong>NE</strong> <!-- Strong udela dane slovo dulezite ve strance ale nic to neudela s jeho zobrazenim-->
+    <i>ANO</i> <!--i - italic udela slovo naklonene-->
+    <s>kurna</s> <!-- s - strikethrough udela slovo preskrtle-->
+    <q>If you want to be the best, you have to do things that other people aren’t willing to do.</q> <!-- q - quote pouziva se na citaty -->
+
+<div>
+    <h3>Zkousime style v html</h3> 
+    <a href="/cus.html">Tudy se dostanes do CUS</a> <!-- Linkovani na sve stranky, Vzdy se pouziva "a" na linkovani-->  
+        <br> <!-- Novy radek-->
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">Mega dobra stranka</a> <!-- Linkovani na jine stranky-->
+</div>
+
+<div>
+    <form> <!-- Form je sekce dokumentu kde nejaky clovek odesila informace (napr. jmeno, gender atd.)-->
+        <fieldset> <!--Udela to kolem ramecek--> 
+            <legend>Sign Up</legend> <!--Nahore v ramecku to udela napis, Nazev Fieldsetu-->
+
+            <label>First Name:</label> <!--Co chci aby vyplnili, titulek pro polozku-->
+            <input type="text" placeholder="First Name"> <!--Input je kde zadavas informace, Type je jaky typ inputu to je, placeholder je ve vnitr napsany v inputu, name je nazev toho inputu-->
+                <br>
+            <label>Gender:</label>
+            <input type="radio" name="gender"> <label for="Women">Women</label>
+            <input type="radio" name="gender"> <label for="Men">Men</label>
+            <input type="radio" name="gender"> <label for="Else">Else</label>
+
+
+            <button>Submit</button> <!-- Proste tlacitko -->
+       </fieldset>
+    </form>
+</div>
+
+<div>
+    <ul> <p>Ovoce</p> <!-- UL - UNordered list, udela ti to list kde dane veci v nem NEJSOU ocislovane-->
+        <li>Banan</li> <!--Dana vec v liste-->
+        <li>Jablko</li>
+        <li>Hruska</li>
+        <li>Tresen</li>
+    </ul>
+    <ol> <p>Zelenina</p> <!-- OL - Ordered list, udela ti to list kde budou dane veci v nem ocislovane-->
+        <li>Meloun</li> 
+        <li>Okurka</li>
+        <li>Rajce</li>
+        <li>Zeli</li>
+    </ol>
+</div>
+
+<div>  
+    <p>Veci na nakoupeni:</p>
+
+    <dl> <!-- Seznam neceho-->
+        <dt>Jogurty</dt> <!--Podnadpis Seznamu-->
+        <dd>Rusky jogurt</dd> <!--Dane veci co jsou v seznamu-->
+        <dd>Madarsky jogurt</dd>
+
+        <dt>Chleba</dt>
+        <dd>Zitny</dd>
+        <dd>Polozitny</dd>
+        <dd>Vubeczitny</dd>
+
+    </dl>
+</div>
+
+<div>
+    <figure> <!--Nejakym zpusobem samotny obsah s volitelnym popiskem/nadpisem-->
+        <img src="https://blog.myswimpro.com/wp-content/uploads/2020/09/phelps-medals.jpg"> <!-- img - obrazek takhle se linkuje obrazek z jinych zdroju-->
+        <figcaption>The best swimmer of all time MICHAEL PHELPS</figcaption> <!--Popisek k figure-->
+    </figure>
+    <figure>
+        <img src="\Users\danmi\Desktop"> <!-- Takto se linkuje obrazek z pocitace nebo treba ze serveru-->
+        <figcaption>The best breastroke swimmer of all time ADAM PEATY</figcaption>
+    </figure>
+</div>
+
+
+    
+<table> <!-- Zacatek tabulky -->
+    <caption>Casy a FINA body</caption> <!--Nazev tabulky-->
+      <thead> <!--Pouziva se to hlavne kdyz je vice dat v tabulce ale podstate se do toho pise vsechno co je nahore -->
+        <tr>
+            <th>Styl</th> <!--Obsah tabulky v thead-->
+            <th>Cas</th>
+            <th>FINA body</th>
+        </tr>
+     </thead>
+     <tbody> <!--Pise se do toho obsah-->
+        <tr>
+            <td>100K</td> <!--Obsah tabulky v tbody-->
+            <td>54s</td>
+            <td>568</td>
+        </tr>
+        <tr>
+            <td>200K</td>
+            <td>1:59,00s</td>
+            <td>600</td>
+        </tr>
+        <tr>
+            <td>100M</td>
+            <td>58s</td>
+            <td>580</td>
+        </tr>
+   </tbody>
+</table>
+
+    <hr> <!--Udela to caru-->
+
+    <button id="sort">Seradit</button>
+    <table id="words"></table>
+
+    <script src="script.js"></script> <!--Připojení javascriptu k html ALE da se do nej psat i Javascript v HTML!!!-->
+</body>
+</html>
